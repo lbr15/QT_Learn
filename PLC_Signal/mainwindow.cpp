@@ -97,9 +97,7 @@ void MainWindow::on_pushButton_3_clicked()
         flag=0;
     }
 
-
     ui->label->setText(dis);
 
-//    ui->radioButton->pressed();
     qDebug() << sizeof(Byte_to_Bit(5)) << "\n" << Byte_to_Bit(5) ;
 }
