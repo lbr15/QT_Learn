@@ -61,3 +61,45 @@ void MainWindow::on_pushButton_2_clicked()
              <<  "k " << sizeof(A4) << "\n"
              <<  "A4" << iSignalTbl.A_PMCAlmAddr[1] << "\n";
 }
+
+bool flag=0;
+
+//=========================================================================//
+//DB_W 将8进制转化为2进制数字显示
+QString Byte_to_Bit (unsigned char indata)
+{
+    QString str="0";
+    S8 st;
+    for(char i=0;i<8;i++)
+    {
+        if(indata&(1<<i))
+            st='1';
+        else
+            st='0';
+        str[14-2*i]=st;
+    }
+    return str;
+}
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    QString dis="0";
+    dis = Byte_to_Bit(iSignalTbl.A_PMCAlmAddr[1])+"\n";
+    dis += Byte_to_Bit(iSignalTbl.A_PMCAlmAddr[2])+"\n";
+    if(flag==0)
+    {
+        iSignalTbl.A_PMCAlmAddr[1]++;
+        flag=1;
+    }
+    else
+    {
+        iSignalTbl.A_PMCAlmAddr[2]++;
+        flag=0;
+    }
+
+
+    ui->label->setText(dis);
+
+//    ui->radioButton->pressed();
+    qDebug() << sizeof(Byte_to_Bit(5)) << "\n" << Byte_to_Bit(5) ;
+}
