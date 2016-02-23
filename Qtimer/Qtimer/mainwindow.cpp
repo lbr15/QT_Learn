@@ -1,6 +1,8 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "QDebug"
+#include "QKeyEvent"
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
@@ -16,7 +18,10 @@ MainWindow::~MainWindow()
 
 void MainWindow::keyPressEvent(QKeyEvent *qevent)
 {
-;;
+    if(qevent->key()==Qt::Key_0)
+    {
+        qDebug() << "Pressed Key_0";
+    }
 }
 void MainWindow::timerEvent(QTimerEvent *event)
 {
