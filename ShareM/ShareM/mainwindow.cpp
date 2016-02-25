@@ -53,9 +53,11 @@ void MainWindow::loadfromfile()
 
 void MainWindow::loadfrommem()
 {
-    if(!shareMemory.attach())//将shareMemory 与该进程绑定，使之可以访问shareMemory里的内容
+    qDebug()<<"kkkk"<<shareMemory.isAttached();
+    if(!shareMemory.isAttached())//将shareMemory 与该进程绑定，使之可以访问shareMemory里的内容
     {
         qDebug()<<"can`t attach share memory";
+        qDebug()<<shareMemory.error();
     }
 
     QBuffer buffer;
