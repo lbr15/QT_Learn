@@ -15,7 +15,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButton_clicked()
 {
-    dd.start();
+//    dd.start();
     ui->pushButton->setEnabled(false);
     ui->pushButton_2->setEnabled(true);
 }
@@ -23,9 +23,9 @@ void MainWindow::on_pushButton_clicked()
 
 void MainWindow::on_pushButton_2_clicked()
 {
-    if(dd.isRunning())
+//    if(dd.isRunning())
     {
-        dd.stop();
+//        dd.stop();
         ui->pushButton->setEnabled(true);
         ui->pushButton_2->setEnabled(false);
     }
@@ -33,9 +33,22 @@ void MainWindow::on_pushButton_2_clicked()
 
 void MainWindow::on_pushButton_3_clicked()      //状态显示
 {
-    if(dd.isFinished())
+//    if(dd.isFinished())
         qDebug()<<"ffalse";
-    if(dd.isRunning())
+//    if(dd.isRunning())
         qDebug()<<"ttrue";
 
+}
+
+void MainWindow::on_pushButton_4_clicked()
+{
+    pp.start();
+    if(tt.wait())           //wati功能：阻塞当前进程，直到进程结束
+        qDebug()<<"wait OK";
+}
+
+
+void MainWindow::on_pushButton_5_clicked()
+{
+    tt.start();
 }

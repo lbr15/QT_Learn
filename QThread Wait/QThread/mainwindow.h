@@ -3,8 +3,9 @@
 
 #include <QMainWindow>
 #include"QDebug"
-
 #include "mx.h"
+#include "mxx.h"
+
 namespace Ui {
 class MainWindow;
 }
@@ -24,9 +25,14 @@ private slots:
 
     void on_pushButton_3_clicked();
 
+    void on_pushButton_4_clicked();
+
+    void on_pushButton_5_clicked();
+
 private:
     Ui::MainWindow *ui;
-    mx dd;          //声明私有对象
+    mx pp;          //声明私有对象
+    mxx tt;
 };
 
 #endif // MAINWINDOW_H
