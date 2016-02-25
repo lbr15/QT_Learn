@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>？？成对象</string>
+     <string>类生成对象</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_2">
@@ -50,7 +50,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>类生成对象</string>
+     <string>PushButton</string>
     </property>
    </widget>
   </widget>
