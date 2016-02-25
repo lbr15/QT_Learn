@@ -22,7 +22,7 @@ void MainWindow::on_pushButton_clicked()
 
 void MainWindow::on_pushButton_2_clicked()
 {
-    proc.start("notepad.exe");              //私有类 内存不会释放
+    proc.start("notepad.exe");              //私有类 内存不会释放   // 私有类定义QProcess
 }
 
 void MainWindow::on_pushButton_3_clicked()
